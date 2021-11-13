@@ -8,9 +8,10 @@
 
     <Button
         android:id="@+id/btn_getCityID"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="Get\nCity ID"
         app:layout_constraintEnd_toStartOf="@+id/btn_getWeatherByCityID"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,6 +19,7 @@
 
     <Button
         android:id="@+id/btn_getWeatherByCityID"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Get Weather\nBy ID"
@@ -27,13 +29,13 @@
 
     <Button
         android:id="@+id/btn_getWeatherByCityName"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Get Weather\nBy Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/btn_getWeatherByCityID"
-        app:layout_constraintTop_toTopOf="@id/btn_getWeatherByCityID"
-        />
+        app:layout_constraintTop_toTopOf="@id/btn_getWeatherByCityID" />
 
     <EditText
         android:id="@+id/et_dataInput"
@@ -46,5 +48,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_getCityID" />
+
+    <ListView
+        android:id="@+id/lv_weatherReports"
+        android:layout_width="409dp"
+        android:layout_height="693dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_dataInput" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
