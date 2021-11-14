@@ -12,7 +12,7 @@ public class WeatherReportModel {
     private double the_temp;
     private double wind_speed;
     private double wind_direction;
-    private int air_pressure;
+    private double air_pressure;
     private int humidity;
     private double visibility;
     private int predictability;
@@ -32,6 +32,10 @@ public class WeatherReportModel {
         this.humidity = humidity;
         this.visibility = visibility;
         this.predictability = predictability;
+    }
+
+    public WeatherReportModel() {
+
     }
 
     public long getId() {
@@ -114,7 +118,7 @@ public class WeatherReportModel {
         this.wind_direction = wind_direction;
     }
 
-    public int getAir_pressure() {
+    public double getAir_pressure() {
         return air_pressure;
     }
 
@@ -148,21 +152,11 @@ public class WeatherReportModel {
 
     @Override
     public String toString() {
-        return "WeatherReportModel{" +
-                "id=" + id +
-                ", weather_state_name='" + weather_state_name + '\'' +
-                ", weather_state_abbr='" + weather_state_abbr + '\'' +
-                ", created='" + created + '\'' +
-                ", applicable_date='" + applicable_date + '\'' +
-                ", min_temp=" + min_temp +
-                ", max_temp=" + max_temp +
-                ", the_temp=" + the_temp +
-                ", wind_speed=" + wind_speed +
-                ", wind_direction=" + wind_direction +
-                ", air_pressure=" + air_pressure +
-                ", humidity=" + humidity +
-                ", visibility=" + visibility +
-                ", predictability=" + predictability +
-                '}';
+        return
+                weather_state_name +
+                        "\nDate: " + applicable_date +
+                        "\nTemperature: " + String.format("%.2f", the_temp) +
+                        "\nMin: " + String.format("%.2f", min_temp) +
+                        "\nMax: " + String.format("%.2f", max_temp);
     }
 }
